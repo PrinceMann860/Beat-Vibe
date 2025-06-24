@@ -1,5 +1,5 @@
 // Music Player Application
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // Sample music data
   const songs = [
     {
@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'STFU',
       artist: 'AP Dhillon',
       album: 'OKAY STFU',
+      genre: 'Hip Hop',
+      playlist: 'Chill Vibes, Road Trip, Party Mix',
       duration: 203,
       artwork: 'https://c.saavncdn.com/378/OKAY-STFU-Punjabi-2025-20250502063450-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/378/8cee3668b7d5ae40e5371e7568d7c7cd_160.mp4',
@@ -17,7 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Take Notes',
       artist: 'Sidhu Moosewala',
       album: 'Moose Print',
+      genre: 'Punjabi',
       duration: 216,
+      playlist: 'Workout Mix, Road Trip',
       artwork: 'https://c.saavncdn.com/785/Moose-Print-Punjabi-2025-20250617155138-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/785/beb3e4afda0d02ea47c127ccd16f1290_160.mp4',
       lyrics: ""
@@ -27,6 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Excuses',
       artist: 'AP Dhillon, Gurinder Gill, Intense',
       album: 'Excuses',
+      genre: 'Hip Hop',
+      playlist: 'Road Trip, Sad Songs',
       duration: 177,
       artwork: 'https://c.saavncdn.com/890/Excuses-English-2021-20210930112054-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/890/a18aabc4681dc6c334d5d29b67e84a0f_160.mp4',
@@ -37,6 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Majhail',
       artist: 'AP Dhillon, Gurinder Gill',
       album: 'Majhail',
+      genre: 'Punjabi',
+      playlist: 'Chill Vibes, Road Trip, Workout Mix',
       duration: 175,
       artwork: 'https://c.saavncdn.com/648/Majhail-English-2020-20200627205840-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/648/af3596462f299185b71032500b843377_160.mp4',
@@ -47,6 +55,8 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Rail',
       artist: 'Sumit Parta',
       album: 'singe-track',
+      genre: 'Haryanvi',
+      playlist: 'Party Mix, Road Trip, Workout Mix, Chill Vibes',
       duration: 126,
       artwork: 'https://c.saavncdn.com/734/Rail-Haryanvi-2025-20250513163335-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/734/91e30d07914ec39080d11d6fd249f027_160.mp4',
@@ -57,6 +67,8 @@ document.addEventListener('DOMContentLoaded', function() {
       title: '295',
       artist: 'Sidhu Moosewala',
       album: 'Moosetape',
+      genre: 'Punjabi',
+      playlist: 'Road Trip',
       duration: 270,
       artwork: 'https://c.saavncdn.com/609/Moosetape-Punjabi-2021-20220427043323-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/609/c90b3b6aa1baeb5d763d475c5d50376c_160.mp4',
@@ -67,6 +79,8 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'So High',
       artist: 'Sidhu Moosewala',
       album: 'PBX 1',
+      genre: 'Punjabi',
+      playlist: 'Workout Mix, Road Trip, Party Mix',
       duration: 233,
       artwork: 'https://c.saavncdn.com/544/So-High-Punjabi-2017-20220811172517-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/544/fa128b5b00df068d78bc50bf19bf137f_160.mp4',
@@ -77,6 +91,8 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'The Last Ride',
       artist: 'Sidhu Moosewala',
       album: 'Moosetape',
+      genre: 'Punjabi',
+      playlist: 'Road Trip, Sad Songs',
       duration: 256,
       artwork: 'https://c.saavncdn.com/582/The-Last-Ride-Punjabi-2022-20220517061646-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/582/66fbc0a08cf9051e4faad09c541e49ce_160.mp4',
@@ -87,6 +103,8 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Supreme',
       artist: 'Shubh',
       album: 'Single-track',
+      genre: 'Punjabi',
+      playlist: 'Chill Vibes, Road Trip, Workout Mix',
       duration: 178,
       artwork: 'https://c.saavncdn.com/158/Supreme-Punjabi-2025-20250415072807-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/158/41ac188e91d72922be080dd7ca0f1c6c_160.mp4',
@@ -97,6 +115,8 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Dior',
       artist: 'Shubh',
       album: 'Still Rollin',
+      genre: 'Punjabi',
+      playlist: 'Chill Vibes, Road Trip',
       duration: 149,
       artwork: 'https://c.saavncdn.com/704/Still-Rollin-Punjabi-2023-20230512121542-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/704/e6e17e95adcde7038c33cf704b1ab611_160.mp4',
@@ -107,6 +127,8 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Young G.O.A.T',
       artist: 'Cheema y',
       album: 'Young G.O.A.T',
+      genre: 'Punjabi',
+      playlist: 'Chill Vibes, Road Trip, Workout Mix',
       duration: 225,
       artwork: 'https://c.saavncdn.com/237/Young-G-O-A-T-Punjabi-2025-20250225150727-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/237/8b9556d16f2b266fdd262d627c009251_160.mp4',
@@ -117,6 +139,8 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Russian Bandana',
       artist: 'Dhanda Nyoliwala',
       album: 'Single-track',
+      genre: 'Hip Hop',
+      playlist: 'Chill Vibes, Road Trip, Workout Mix',
       duration: 197,
       artwork: 'https://c.saavncdn.com/404/Russian-Bandana-Hindi-2024-20240910053147-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/404/f3bf126e1401649443598e6fa575cb7c_160.mp4',
@@ -127,6 +151,8 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Knife Brows',
       artist: 'Dhanda Nyoliwala',
       album: 'Not by Chance',
+      genre: 'Hindi',
+      playlist: 'Chill Vibes, Road Trip, Workout Mix',
       duration: 224,
       artwork: 'https://c.saavncdn.com/511/DNW-Vol-1-Hindi-2024-20241017154112-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/511/e7d19d1cd37e58cb9f6bfe08e66e1973_160.mp4',
@@ -137,6 +163,8 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Unstoppable',
       artist: 'Dhanda Nyoliwala',
       album: 'single-track',
+      genre: 'Hindi',
+      playlist: 'Chill Vibes, Road Trip, Workout Mix',
       duration: 199,
       artwork: 'https://c.saavncdn.com/685/Unstoppable-Hindi-2024-20240321161042-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/685/10ab095871edf5db7de13af2644b23cd_160.mp4',
@@ -147,6 +175,8 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Old Money',
       artist: 'AP Dhillon',
       album: 'single-track',
+      genre: 'Hip Hop',
+      playlist: 'Chill Vibes, Road Trip, Workout Mix',
       duration: 127,
       artwork: 'https://c.saavncdn.com/939/Old-Money-Punjabi-2024-20240809063655-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/939/a749b617dec1c3c77e61b4a1083b2436_160.mp4',
@@ -157,6 +187,8 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Drippy',
       artist: 'Sidhu Moosewala, AR Paisley',
       album: 'single-track',
+      genre: 'Punjabi',
+      playlist: 'Road Trip, Workout Mix, Party Mix',
       duration: 195,
       artwork: 'https://c.saavncdn.com/457/Drippy-Punjabi-2024-20240202095601-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/457/742fb2c3e599534656d0392c54250827_160.mp4',
@@ -167,6 +199,8 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'The Jatts',
       artist: 'Varinder Brar',
       album: 'Single-track',
+      genre: 'Punjabi',
+      playlist: 'Chill Vibes, Road Trip, Workout Mix',
       duration: 161,
       artwork: 'https://c.saavncdn.com/516/The-Jatts-Punjabi-2024-20240115164201-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/516/c4af8905eba82241fb070b71b21be493_160.mp4',
@@ -177,6 +211,8 @@ document.addEventListener('DOMContentLoaded', function() {
       title: '52 Bars',
       artist: 'Karan Aujla',
       album: 'Four You',
+      genre: 'Punjabi',
+      playlist: 'Chill Vibes, Road Trip',
       duration: 237,
       artwork: 'https://c.saavncdn.com/552/Four-You-Punjabi-2023-20230130150304-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/552/b8f53cb2202fa88a770aba7b67e84535_160.mp4',
@@ -187,6 +223,8 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Roots',
       artist: 'Bintu Pabra',
       album: 'Single-track',
+      genre: 'Haryanvi',
+      playlist: 'Chill Vibes,',
       duration: 263,
       artwork: 'https://c.saavncdn.com/925/Roots-Haryanvi-2022-20240321064835-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/925/97dc28640c4c0659f994384ca15bbaa9_160.mp4',
@@ -197,6 +235,8 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Arbi Ghode',
       artist: 'Masoom Sharma',
       album: 'Single-track',
+      genre: 'Haryanvi',
+      playlist: 'Chill Vibes, Road Trip, Party Mix',
       duration: 200,
       artwork: 'https://c.saavncdn.com/508/Arbi-Ghode-Unknown-2024-20240616133051-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/508/387d8c8c9944736e17f7d36fb5891df2_160.mp4',
@@ -207,6 +247,8 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Ramayan ka Saar',
       artist: 'Masoom Sharma',
       album: 'single-track',
+      genre: 'Haryanvi',
+      playlist: 'Chill Vibes, Road Trip, Workout Mix',
       duration: 187,
       artwork: 'https://c.saavncdn.com/931/Ramayan-Ka-Saar-Haryanvi-2025-20250521141230-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/931/dc85bc9570ef9035de6f4c65d2480428_160.mp4',
@@ -217,6 +259,8 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Never Fold',
       artist: 'Sidhu Moosewala, Sunny Malton',
       album: 'No Name',
+      genre: 'Punjabi',
+      playlist: 'Road Trip, Workout Mix',
       duration: 183,
       artwork: 'https://c.saavncdn.com/448/No-Name-Punjabi-2022-20220425032043-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/448/ebf5f8053c69b5c5ee27905f31fc9fbf_160.mp4',
@@ -227,6 +271,8 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Celebrity killer',
       artist: 'Sidhu Moosewala, Tion Wayne',
       album: 'Moosetape',
+      genre: 'Punjabi',
+      playlist: 'Road Trip, Workout Mix',
       duration: 203,
       artwork: 'https://c.saavncdn.com/609/Moosetape-Punjabi-2021-20220427043323-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/609/58c7d32635c6e47e221b908515018df6_160.mp4',
@@ -237,14 +283,14 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Courtside',
       artist: 'Karan Aujla',
       album: 'single-track',
+      genre: 'Punjabi',
+      playlist: 'Chill Vibes, Road Trip, Party Mix',
       duration: 168,
       artwork: 'https://c.saavncdn.com/907/Courtside-Punjabi-2025-20250506120316-500x500.jpg',
       audioUrl: 'https://aac.saavncdn.com/907/7de4a84c4db2b9be2eed8be41b3ab49b_160.mp4',
       lyrics: ""
     }
-
-
-];
+  ];
 
   // User library data
   const userLibrary = {
@@ -257,12 +303,11 @@ document.addEventListener('DOMContentLoaded', function() {
   let isPlaying = false;
   let isShuffle = false;
   let isRepeat = false;
+  let currentPlaylist = [...songs];
+  let currentPlaylistName = ""; // Add this at the top with other state
 
   // DOM elements
-    const audioElement = document.getElementById('audioElement');
-  const songListElement = document.getElementById('songList');
-  const queueListElement = document.getElementById('queueList');
-  const lyricsContainer = document.getElementById('lyricsContainer');
+  const audioElement = document.getElementById('audioElement');
   const nowPlayingArtwork = document.querySelector('.now-playing-artwork img');
   const nowPlayingTitle = document.querySelector('.now-playing-title');
   const nowPlayingArtist = document.querySelector('.now-playing-artist');
@@ -280,11 +325,14 @@ document.addEventListener('DOMContentLoaded', function() {
   const durationTimeElement = document.querySelector('.duration-time');
   const volumeButton = document.getElementById('volumeButton');
   const volumeSlider = document.getElementById('volumeSlider');
-  const sortSelect = document.getElementById('sortSelect');
   const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
   const mobileMenu = document.querySelector('.mobile-menu');
   const likeButton = document.querySelector('.player-info .like-button');
-
+  const searchInput = document.querySelector('.searchInput');
+  const songListElement = document.getElementById('songList');
+  const queueListElement = document.getElementById('queueList');
+  const lyricsContainer = document.getElementById('lyricsContainer');
+  const sortSelect = document.getElementById('sortSelect');
 
   // Mobile menu toggle
   mobileMenuToggle.addEventListener('click', () => {
@@ -299,6 +347,12 @@ document.addEventListener('DOMContentLoaded', function() {
       mobileMenuToggle.classList.remove('active');
     }
   });
+  document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('show');
+      mobileMenuToggle.classList.remove('active');
+    });
+  });
 
   // Helper functions
   function formatTime(seconds) {
@@ -307,19 +361,24 @@ document.addEventListener('DOMContentLoaded', function() {
     return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
   }
 
-  let currentPlaylist = [...songs]; // Use this for all playback and rendering
-
   // Render songs list
   function renderSongList(songsArray) {
-    songListElement.innerHTML = '';
-    
+    songListElement.innerHTML = `
+      <tr>
+        <th></th>
+        <th>Title & Artist - Album</th>
+        <th><span class="material-icons">schedule</span></th>
+        <th></th>
+      </tr>
+    `;
+
     songsArray.forEach((song, index) => {
       const row = document.createElement('tr');
       row.dataset.index = index;
       if (index === currentSongIndex) {
         row.classList.add('active');
       }
-      
+
       row.innerHTML = `
         <td class="song-artwork-cell">
           <img src="${song.artwork}" alt="${song.title} artwork" class="song-artwork-img" />
@@ -338,16 +397,15 @@ document.addEventListener('DOMContentLoaded', function() {
           </button>
         </td>
       `;
-      
+
       row.addEventListener('click', () => playTrack(index));
-      
-      // Add like button event listener
+
       const likeBtn = row.querySelector('.like-button');
       likeBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         toggleLikeSong(song.id, likeBtn);
       });
-      
+
       songListElement.appendChild(row);
     });
   }
@@ -364,8 +422,7 @@ document.addEventListener('DOMContentLoaded', function() {
       button.querySelector('.material-icons').textContent = 'favorite';
       setTimeout(() => button.classList.remove('animate'), 400);
     }
-    
-    // Update player like button if this is the current song
+
     if (currentSongIndex >= 0 && songs[currentSongIndex].id === songId) {
       const isLiked = userLibrary.likedSongs.has(songId);
       likeButton.querySelector('.material-icons').textContent = isLiked ? 'favorite' : 'favorite_border';
@@ -376,11 +433,11 @@ document.addEventListener('DOMContentLoaded', function() {
   // Render queue
   function renderQueue() {
     queueListElement.innerHTML = '';
-    
+
     if (currentSongIndex >= 0) {
       const queue = [...currentPlaylist];
       queue.splice(currentSongIndex, 1);
-      
+
       queue.forEach((song, index) => {
         const queueIndex = index >= currentSongIndex ? index + 1 : index;
         const li = document.createElement('li');
@@ -399,63 +456,68 @@ document.addEventListener('DOMContentLoaded', function() {
   // Play track
   function playTrack(index) {
     if (index < 0 || index >= currentPlaylist.length) return;
-    
+
     currentSongIndex = index;
     const song = currentPlaylist[index];
-    
-    // Update audio element
+
     audioElement.src = song.audioUrl;
     audioElement.currentTime = 0;
-    
-    // Update player info
+
     updatePlayerInfo(song);
-    
-    // Play the audio
-    audioElement.play();
-    isPlaying = true;
-    updatePlayPauseButton();
-    
-    // Highlight current song in list
+
+    audioElement.play()
+      .then(() => {
+        isPlaying = true;
+        updatePlayPauseButton();
+      })
+      .catch(error => {
+        console.error('Playback failed:', error);
+        document.addEventListener('click', function tryPlayOnce() {
+          audioElement.play()
+            .then(() => {
+              isPlaying = true;
+              updatePlayPauseButton();
+            })
+            .catch(err => console.error('Still failed:', err));
+          document.removeEventListener('click', tryPlayOnce);
+        }, { once: true });
+      });
+
     highlightCurrentSong();
-    
-    // Update queue
     renderQueue();
-    
-    // Add to recently played
     addToRecentlyPlayed(song.id);
   }
 
   // Update player info
   function updatePlayerInfo(song) {
-    nowPlayingArtwork.src = song.artwork;
-    nowPlayingArtwork.alt = `${song.album} cover`;
-    nowPlayingTitle.textContent = song.title;
-    nowPlayingArtist.textContent = song.artist;
-
+    // Footer player info
     playerArtwork.src = song.artwork;
     playerArtwork.alt = `${song.album} cover`;
     playerSongTitle.textContent = song.title;
     playerSongArtist.textContent = song.artist;
 
-    // Update like button
-    const isLiked = userLibrary.likedSongs.has(song.id);
-    likeButton.querySelector('.material-icons').textContent = isLiked ? 'favorite' : 'favorite_border';
-    likeButton.classList.toggle('liked', isLiked);
+    // --- Sidebar Now Playing ---
+    if (nowPlayingArtwork) nowPlayingArtwork.src = song.artwork;
+    if (nowPlayingTitle) nowPlayingTitle.textContent = song.title;
+    if (nowPlayingArtist) nowPlayingArtist.textContent = song.artist;
 
-    // Update lyrics (support \n for new lines)
-    lyricsContainer.innerHTML = (song.lyrics && song.lyrics.trim())
-      ? song.lyrics.replace(/\n/g, '\n')
-      : 'No lyrics available for this track.';
+    // Lyrics
+    if (lyricsContainer) {
+      lyricsContainer.innerHTML = (song.lyrics && song.lyrics.trim())
+        ? song.lyrics.replace(/\n/g, '<br>')
+        : 'No lyrics available for this track.';
+    }
 
-    // Update duration time
-    durationTimeElement.textContent = formatTime(song.duration);
+    if (durationTimeElement) {
+      durationTimeElement.textContent = formatTime(song.duration);
+    }
   }
 
   // Highlight current song
   function highlightCurrentSong() {
     const rows = document.querySelectorAll('#songList tr');
     rows.forEach(row => row.classList.remove('active'));
-    
+
     if (currentSongIndex >= 0) {
       rows[currentSongIndex].classList.add('active');
     }
@@ -469,13 +531,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Add to recently played
   function addToRecentlyPlayed(songId) {
-    // Remove if already exists
     userLibrary.recentlyPlayed = userLibrary.recentlyPlayed.filter(id => id !== songId);
-    
-    // Add to beginning
     userLibrary.recentlyPlayed.unshift(songId);
-    
-    // Keep only the last 10
     if (userLibrary.recentlyPlayed.length > 10) {
       userLibrary.recentlyPlayed.pop();
     }
@@ -485,14 +542,15 @@ document.addEventListener('DOMContentLoaded', function() {
   function togglePlayPause() {
     if (isPlaying) {
       audioElement.pause();
+      isPlaying = false;
     } else {
       if (currentSongIndex < 0) {
         playTrack(0);
       } else {
         audioElement.play();
+        isPlaying = true;
       }
     }
-    isPlaying = !isPlaying;
     updatePlayPauseButton();
   }
 
@@ -522,6 +580,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Play previous track
   function playPrevTrack() {
+    if (audioElement.currentTime > 3) {
+      audioElement.currentTime = 0;
+      return;
+    }
+
     let prevIndex = currentSongIndex - 1;
     if (prevIndex < 0) {
       if (isRepeat) {
@@ -575,8 +638,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Update volume
   function updateVolume() {
     audioElement.volume = volumeSlider.value / 100;
-    
-    // Update volume icon
     const volumeIcon = volumeButton.querySelector('.material-icons');
     if (audioElement.volume === 0) {
       volumeIcon.textContent = 'volume_off';
@@ -590,7 +651,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Sort songs
   function sortSongs(songsArray, method) {
     const sorted = [...songsArray];
-    
     switch (method) {
       case 'az':
         sorted.sort((a, b) => a.title.localeCompare(b.title));
@@ -599,40 +659,63 @@ document.addEventListener('DOMContentLoaded', function() {
         sorted.sort((a, b) => b.title.localeCompare(a.title));
         break;
       case 'newest':
-        // Assuming newer songs have higher IDs for demo purposes
         sorted.sort((a, b) => parseInt(b.id.slice(1)) - parseInt(a.id.slice(1)));
         break;
       case 'oldest':
         sorted.sort((a, b) => parseInt(a.id.slice(1)) - parseInt(b.id.slice(1)));
         break;
     }
-    
     return sorted;
   }
-  // search songs
+
+  // Search songs
   function searchSongs(query) {
     const lowerQuery = query.toLowerCase();
-    return songs.filter(song => 
+    return songs.filter(song =>
       song.title.toLowerCase().includes(lowerQuery) ||
       song.artist.toLowerCase().includes(lowerQuery) ||
       song.album.toLowerCase().includes(lowerQuery)
     );
   }
-  // Search functionality
-  const searchInput = document.querySelector('.searchInput'); // <-- changed from getElementById
-searchInput.addEventListener('input', function() {
-  const query = searchInput.value.trim();
-  if (query) {
-    currentPlaylist = searchSongs(query);
-  } else {
-    currentPlaylist = [...songs];
+
+  // Play category functions
+  function playTopHits() {
+    currentPlaylist = songs.slice(0, 6);
+    playTrack(0);
   }
-  currentSongIndex = -1;
-  renderSongList(currentPlaylist);
-  renderQueue();
-});
 
+  function playNewReleases() {
+    currentPlaylist = songs.slice(6, 12);
+    playTrack(0);
+  }
 
+  function playMoodPlaylists() {
+    currentPlaylist = songs.slice(12, 18);
+    playTrack(0);
+  }
+
+  function playGenreMixes() {
+    currentPlaylist = songs.slice(18);
+    playTrack(0);
+  }
+
+  function playGenre(genre) {
+    // Filter songs by the genre property
+    let genreSongs = songs.filter(song => song.genre && song.genre.toLowerCase() === genre.toLowerCase());
+
+    // Fallback: if no songs found, just play all
+    if (genreSongs.length === 0) genreSongs = [...songs];
+
+    currentPlaylist = genreSongs;
+    playTrack(0);
+  }
+
+  // Make functions available globally
+  window.playTopHits = playTopHits;
+  window.playNewReleases = playNewReleases;
+  window.playMoodPlaylists = playMoodPlaylists;
+  window.playGenreMixes = playGenreMixes;
+  window.playGenre = playGenre;
 
   // Event listeners
   playPauseButton.addEventListener('click', togglePlayPause);
@@ -646,31 +729,219 @@ searchInput.addEventListener('input', function() {
       toggleLikeSong(songId, likeButton);
     }
   });
-  
 
   progressBar.addEventListener('click', seekAudio);
-  
   audioElement.addEventListener('timeupdate', updateProgressBar);
   audioElement.addEventListener('ended', playNextTrack);
-  
   volumeButton.addEventListener('click', toggleMute);
   volumeSlider.addEventListener('input', updateVolume);
-  
-  sortSelect.addEventListener('change', () => {
-    currentPlaylist = sortSongs([...songs], sortSelect.value);
-    currentSongIndex = -1;
-    renderSongList(currentPlaylist);
-    renderQueue();
-  });
 
-  // Mobile menu toggle
-  mobileMenuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('show');
-  });
-
+  if (searchInput) {
+    searchInput.addEventListener('input', function () {
+      const query = searchInput.value.trim();
+      currentPlaylist = query ? searchSongs(query) : [...songs];
+      currentSongIndex = -1;
+      renderSongList(currentPlaylist);
+      renderQueue();
+    });
+  }
+  if (sortSelect) {
+    sortSelect.addEventListener('change', () => {
+      currentPlaylist = sortSongs([...songs], sortSelect.value);
+      currentSongIndex = -1;
+      renderSongList(currentPlaylist);
+      renderQueue();
+    });
+  }
   // Initialize
   currentPlaylist = [...songs];
-  renderSongList(currentPlaylist);
-  renderQueue();
-});
+  if (songListElement) renderSongList(currentPlaylist);
+  if (queueListElement) renderQueue();
 
+  // Modern audio playback requires user interaction
+  document.addEventListener('click', function initAudio() {
+    audioElement.play().then(() => {
+      audioElement.pause();
+    }).catch(e => { });
+    document.removeEventListener('click', initAudio);
+  }, { once: true });
+
+  // Artist cards
+  const artistsGrid = document.getElementById('artistsGrid');
+  if (artistsGrid) {
+    // Build artist map
+    const artistMap = {};
+    songs.forEach(song => {
+      song.artist.split(',').map(a => a.trim()).forEach(name => {
+        if (!artistMap[name]) {
+          artistMap[name] = {
+            name,
+            artwork: song.artwork,
+            genres: new Set(),
+            songIndexes: []
+          };
+        }
+        artistMap[name].genres.add(song.genre);
+        artistMap[name].songIndexes.push(songs.indexOf(song));
+      });
+    });
+
+    // Render artist cards
+    artistsGrid.innerHTML = '';
+    Object.values(artistMap).forEach(artist => {
+      const genres = Array.from(artist.genres).join(', ');
+      const card = document.createElement('div');
+      card.className = 'artist-card';
+      card.innerHTML = `
+        <div class="artist-image" style="background-image: url('${artist.artwork}');"></div>
+        <div class="artist-info">
+          <h3>${artist.name}</h3>
+          <p>${genres}</p>
+        </div>
+      `;
+      card.addEventListener('click', () => {
+        const randomIndex = artist.songIndexes[Math.floor(Math.random() * artist.songIndexes.length)];
+        playTrack(randomIndex);
+      });
+      artistsGrid.appendChild(card);
+    });
+  }
+
+  // Dynamic Playlists
+  const playlistsGrid = document.getElementById('playlistsGrid');
+  const playlistSongsContainer = document.getElementById('playlistSongsContainer');
+
+  if (playlistsGrid && playlistSongsContainer) {
+    // 1. Build playlist map from songs
+    const playlistMap = {};
+    songs.forEach(song => {
+      if (song.playlist) {
+        song.playlist.split(',').map(p => p.trim()).forEach(playlistName => {
+          if (playlistName) { // Only add non-empty playlist names
+            if (!playlistMap[playlistName]) {
+              playlistMap[playlistName] = [];
+            }
+            playlistMap[playlistName].push(song);
+          }
+        });
+      }
+    });
+
+    // 2. Render playlist cards
+    playlistsGrid.innerHTML = '';
+    Object.entries(playlistMap).forEach(([playlistName, playlistSongs]) => {
+      const card = document.createElement('div');
+      card.className = 'playlist-card';
+      card.innerHTML = `
+    <div class="playlist-image" style="background-image: url('${playlistSongs[0].artwork}');"></div>
+    <div class="playlist-info">
+      <h3>${playlistName}</h3>
+      <p>${playlistSongs.length} song${playlistSongs.length > 1 ? 's' : ''}</p>
+    </div>
+  `;
+      // Show songs and play playlist on card click
+      card.addEventListener('click', () => {
+        currentPlaylist = playlistSongs;
+        currentPlaylistName = playlistName;
+        playTrack(0); // Play first song
+        renderPlaylistSongs(playlistName, playlistSongs); // Show songs below
+      });
+      playlistsGrid.appendChild(card);
+    });
+
+    // 3. Render songs of the selected playlist
+    function renderPlaylistSongs(playlistName, playlistSongs) {
+      playlistSongsContainer.innerHTML = `
+        <div class="playlist-songs-header">
+          <h3>${playlistName} - Songs</h3>
+        </div>
+        <table class="songs-table">
+          <tbody>
+            ${playlistSongs.map((song, idx) => `
+              <tr data-index="${idx}">
+                <td class="song-artwork-cell">
+                  <img src="${song.artwork}" alt="${song.title} artwork" class="song-artwork-img" />
+                </td>
+                <td>
+                  <div class="mobile-song-meta">
+                    <span class="song-title">${song.title}</span>
+                    <span class="mobile-song-artist">${song.artist}</span>
+                    <span class="mobile-song-album">${song.album}</span>
+                  </div>
+                </td>
+                <td class="duration">${formatTime(song.duration)}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      `;
+      // Add click event to play song from playlist
+      playlistSongsContainer.querySelectorAll('tr').forEach(row => {
+        row.addEventListener('click', () => {
+          const idx = parseInt(row.getAttribute('data-index'));
+          currentPlaylist = playlistSongs;
+          currentPlaylistName = playlistName;
+          playTrack(idx);
+          renderPlaylistSongs(currentPlaylistName, currentPlaylist); // Update view to match playing playlist
+        });
+      });
+    }
+
+    // Show the first playlist's songs by default on page load
+    // const firstPlaylist = Object.entries(playlistMap)[0];
+    // if (firstPlaylist) {
+    //   const [playlistName, playlistSongs] = firstPlaylist;
+    //   currentPlaylist = playlistSongs;
+    //   currentPlaylistName = playlistName;
+    //   renderPlaylistSongs(currentPlaylistName, currentPlaylist);
+    // }
+  }
+
+  // Side nav playlist click: play that playlist
+  document.querySelectorAll('.side-nav .nav-section:nth-child(2) .nav-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const playlistName = link.textContent.replace(/^\s*playlist_play\s*/i, '').trim();
+      const playlistSongs = songs.filter(song =>
+        song.playlist && song.playlist.toLowerCase().includes(playlistName.toLowerCase())
+      );
+      if (playlistSongs.length) {
+        currentPlaylist = playlistSongs;
+        currentPlaylistName = playlistName;
+        currentSongIndex = 0;
+        renderSongList(currentPlaylist);
+        playTrack(0);
+        updatePlaylistPageSongs(); // <-- Add this line
+        // Highlight active playlist
+        document.querySelectorAll('.side-nav .nav-section:nth-child(2) .nav-link').forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      }
+    });
+  });
+
+  // Featured banner "Play Now" button
+  const featuredPlayBtn = document.querySelector('.featured-banner .play-btn');
+  if (featuredPlayBtn) {
+    featuredPlayBtn.addEventListener('click', () => {
+      const playlistSongs = songs.filter(song =>
+        song.playlist && song.playlist.toLowerCase().includes('chill vibes')
+      );
+      if (playlistSongs.length) {
+        currentPlaylist = playlistSongs;
+        currentPlaylistName = 'Chill Vibes';
+        currentSongIndex = 0;
+        renderSongList(currentPlaylist);
+        playTrack(0);
+        updatePlaylistPageSongs(); // <-- Add this line
+      }
+    });
+  }
+
+  function updatePlaylistPageSongs() {
+    // Only update if on the playlist page and the container exists
+    const playlistSongsContainer = document.getElementById('playlistSongsContainer');
+    if (playlistSongsContainer && typeof renderPlaylistSongs === 'function' && currentPlaylistName && currentPlaylist.length) {
+      renderPlaylistSongs(currentPlaylistName, currentPlaylist);
+    }
+  }
+});

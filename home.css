@@ -3,6 +3,7 @@
   background: linear-gradient(135deg, rgba(30, 215, 96, 0.2) 0%, rgba(0, 0, 0, 0.7) 100%),
               url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   height: 200px;
   border-radius: 15px;
@@ -128,7 +129,7 @@
 /* Responsive Styles for Home Page */
 @media (max-width: 768px) {
   .featured-banner {
-    height: 160px;
+    height: 200px;
   }
   
   .banner-info h3 {
@@ -138,7 +139,7 @@
 
 @media (max-width: 576px) {
   .featured-banner {
-    height: 140px;
+    height: 200px;
   }
   
   .songs-table thead th:nth-child(4),
