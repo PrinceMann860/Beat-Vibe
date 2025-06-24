@@ -1,0 +1,226 @@
+/* Discover Page Specific Styles */
+.discover-container {
+  padding: 1.5rem;
+}
+
+.discover-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.discover-card {
+  background: var(--color-gray);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: var(--transition);
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.discover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card-image {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.discover-card:hover .card-image {
+  transform: scale(1.03);
+}
+
+.card-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 50%);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.discover-card:hover .card-image::before {
+  opacity: 0.9;
+}
+
+.card-image .play-btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 48px;
+  height: 48px;
+  background: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.discover-card:hover .play-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.play-btn .material-icons {
+  font-size: 28px;
+}
+
+.card-info {
+  padding: 1.2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.card-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-white);
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-info p {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  opacity: 0.9;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content-header {
+  padding: 0 1rem;
+}
+
+.content-header h2 {
+  font-size: 1.8rem;
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+}
+
+/* Loading state */
+.discover-loading {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.loading-card {
+  background: var(--color-gray);
+  border-radius: 12px;
+  overflow: hidden;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.loading-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%, 
+    rgba(255,255,255,0.05) 50%, 
+    rgba(255,255,255,0) 100%);
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Responsive Styles for Discover Page */
+@media (max-width: 1200px) {
+  .discover-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  .discover-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .discover-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1.2rem;
+  }
+  
+  .card-image {
+    height: 140px;
+  }
+  
+  .card-info {
+    padding: 1rem;
+  }
+  
+  .card-info h3 {
+    font-size: 1.1rem;
+  }
+  
+  .card-info p {
+    font-size: 0.85rem;
+  }
+  
+  .card-image .play-btn {
+    width: 40px;
+    height: 40px;
+    bottom: 0.8rem;
+    right: 0.8rem;
+  }
+  
+  .play-btn .material-icons {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .discover-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+  
+  .card-image {
+    height: 120px;
+  }
+  
+  .card-info h3 {
+    font-size: 1rem;
+  }
+  
+  .card-info p {
+    font-size: 0.8rem;
+  }
+  
+  .content-header h2 {
+    font-size: 1.5rem;
+  }
+}

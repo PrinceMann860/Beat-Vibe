@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Genres - BeatVibe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="Style.css" />
+  <link rel="stylesheet" href="generes.css">
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <nav class="top-nav">
+    <div class="logo">
+      <span class="material-icons">music_note</span>
+      <span>BeatVibe</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html"><span class="material-icons">home</span> Home</a>
+      <a href="discover.html"><span class="material-icons">explore</span> Discover</a>
+      <a href="#" class="active"><span class="material-icons">queue_music</span> Genres</a>
+      <a href="artists.html"><span class="material-icons">people</span> Artists</a>
+      <a href="playlists.html"><span class="material-icons">playlist_play</span> Playlists</a>
+    </div>
+    <div class="search-box">
+      <span class="material-icons">search</span>
+      <input type="text" class="searchInput" placeholder="Search songs, artists..." />
+    </div>
+    <button class="mobile-menu-toggle">
+      <span class="material-icons">menu</span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="index.html"><span class="material-icons">home</span> Home</a>
+    <a href="discover.html"><span class="material-icons">explore</span> Discover</a>
+    <a href="#" class="active"><span class="material-icons">queue_music</span> Genres</a>
+    <a href="artists.html"><span class="material-icons">people</span> Artists</a>
+    <a href="playlist.html"><span class="material-icons">playlist_play</span> Playlists</a>
+    <div class="mobile-search">
+      <span class="material-icons">search</span>
+      <input type="text" placeholder="Search..." />
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <main class="main-content">
+      <div class="content-header">
+        <h2>Browse Genres</h2>
+      </div>
+
+      <div class="genres-grid">
+        <div class="genre-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDgyMDR8MHwxfHNlYXJjaHwxfHxtdXNpYyUyMGdlbnJlcyUyQyUyMGN1bHR1cmFsJTIwaW1wYWN0JTJDJTIwc29jaWV0YWwlMjBjaGFuZ2VzJTJDJTIwdGVjaG5vbG9naWNhbCUyMGFkdmFuY2VtZW50c3xlbnwwfDB8fHwxNzQ4NDIyODIxfDA&ixlib=rb-4.1.0&q=80&w=500&?utm_source=numberanalytics&utm_medium=referral');">
+          <h3>Hip Hop</h3>
+          <button class="play-btn" onclick="playGenre('Hip Hop')"><span class="material-icons">play_arrow</span></button>
+        </div>
+
+        <div class="genre-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://mixedinkey.com/wp-content/uploads/2023/02/caught-in-joy-ptVBlniJi50-unsplash-1.png');">
+          <h3>Punjabi</h3>
+          <button class="play-btn" onclick="playGenre('Punjabi')"><span class="material-icons">play_arrow</span></button>
+        </div>
+
+        <div class="genre-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://cdn.prod.website-files.com/65496b1500aed8ad52a5a193/654ce51b50b11a3ee5f07fe9_65496b1500aed8ad52a5a649_3d82e1ba-165e-456d-be9d-1705241db200_pexels-expect-best-351265.jpeg');">
+          <h3>Haryanvi</h3>
+          <button class="play-btn" onclick="playGenre('Haryanvi')"><span class="material-icons">play_arrow</span></button>
+        </div>
+
+        <div class="genre-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+          <h3>Hindi</h3>
+          <button class="play-btn" onclick="playGenre('Hindi')"><span class="material-icons">play_arrow</span></button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Player Controls -->
+  <footer class="player-controls">
+    <div class="player-info">
+      <div class="player-artwork"><img src="https://via.placeholder.com/60" alt="Album artwork" /></div>
+      <div class="player-song-info">
+        <h4 class="player-song-title">No song selected</h4>
+        <p class="player-song-artist"></p>
+      </div>
+      <button class="like-button"><span class="material-icons">favorite_border</span></button>
+    </div>
+
+    <div class="player-center-controls">
+      <div class="player-buttons">
+        <button class="control-button" id="btnShuffle"><span class="material-icons">shuffle</span></button>
+        <button class="control-button" id="btnPrev"><span class="material-icons">skip_previous</span></button>
+        <button class="control-button play-button" id="btnPlayPause"><span class="material-icons">play_arrow</span></button>
+        <button class="control-button" id="btnNext"><span class="material-icons">skip_next</span></button>
+        <button class="control-button" id="btnRepeat"><span class="material-icons">repeat</span></button>
+      </div>
+      <div class="progress-container">
+        <span class="time current-time">0:00</span>
+        <div class="progress-bar" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
+        <span class="time duration-time">0:00</span>
+      </div>
+    </div>
+
+    <div class="player-volume">
+      <button class="volume-button" id="volumeButton"><span class="material-icons">volume_up</span></button>
+      <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="70" />
+    </div>
+  </footer>
+
+  <audio id="audioElement" preload="metadata"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
