@@ -124,27 +124,28 @@ body {
   transition: var(--transition);
 }
 
+
 .mobile-menu-toggle:hover {
   background-color: var(--color-gray);
 }
 
 .mobile-menu {
   display: none;
-  flex-direction: column;
-  background-color: var(--color-dark-gray);
-  padding: 1rem;
   position: fixed;
   top: 70px;
   left: 0;
   right: 0;
+  background: var(--color-dark-gray);
+  padding: 1rem;
   z-index: 999;
-  box-shadow: var(--shadow);
   transform: translateY(-100%);
   opacity: 0;
   transition: all 0.3s ease;
+  border-radius: 0 0 12px 12px;
 }
 
 .mobile-menu.show {
+  display: block;
   transform: translateY(0);
   opacity: 1;
 }
@@ -815,7 +816,7 @@ body {
 /* Fix for mobile menu z-index and background */
 .mobile-menu {
   background: var(--color-dark-gray);
-  z-index: 2000;
+  z-index: 50;
   border-radius: 0 0 12px 12px;
 }
 

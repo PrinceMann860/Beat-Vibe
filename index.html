@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BeatVibe</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Material+Icons"
+    rel="stylesheet" />
   <link rel="stylesheet" href="Style.css" />
   <link rel="stylesheet" href="home.css">
 </head>
+
 <body>
   <!-- Top Navigation Bar -->
   <nav class="top-nav">
@@ -26,23 +29,7 @@
       <span class="material-icons">search</span>
       <input type="text" class="searchInput" placeholder="Search songs, artists..." />
     </div>
-    <button class="mobile-menu-toggle">
-      <span class="material-icons">menu</span>
-    </button>
   </nav>
-
-  <!-- Mobile Menu -->
-  <div class="mobile-menu">
-    <a href="#"><span class="material-icons">home</span> Home</a>
-    <a href="discover.html"><span class="material-icons">explore</span> Discover</a>
-    <a href="genres.html"><span class="material-icons">queue_music</span> Genres</a>
-    <a href="artists.html"><span class="material-icons">people</span> Artists</a>
-    <a href="playlists.html"><span class="material-icons">playlist_play</span> Playlists</a>
-    <div class="mobile-search">
-      <span class="material-icons">search</span>
-      <input type="text" placeholder="Search..." />
-    </div>
-  </div>
 
   <!-- Main Content -->
   <div class="container">
@@ -50,8 +37,11 @@
       <div class="nav-section">
         <h3>Library</h3>
         <a href="#" class="nav-link active"><span class="material-icons">library_music</span> My Library</a>
+        <a href="discover.html" class="nav-link"><span class="material-icons">explore</span>Discover</a>
         <a href="playlist.html" class="nav-link"><span class="material-icons">queue_music</span> Playlists</a>
         <a href="generes.html" class="nav-link"><span class="material-icons">list</span> Genres</a>
+        <a href="artists.html" class="nav-link"><span class="material-icons">people</span> Artists</a>
+
       </div>
       <div class="nav-section">
         <h3>Your Playlists</h3>
@@ -90,7 +80,10 @@
         <table class="songs-table">
           <thead>
             <tr>
-              <th>#</th><th>Title&Artist-Album</th><th><span class="material-icons">schedule</span></th><th></th>
+              <th>#</th>
+              <th>Title&Artist-Album</th>
+              <th><span class="material-icons">schedule</span></th>
+              <th></th>
             </tr>
           </thead>
           <tbody id="songList"></tbody>
@@ -107,7 +100,9 @@
             <h4 class="now-playing-title">No song selected</h4>
             <p class="now-playing-artist"></p>
             <div class="now-playing-progress">
-              <div class="progress-bar"><div class="progress-fill"></div></div>
+              <div class="progress-bar">
+                <div class="progress-fill"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -138,13 +133,16 @@
       <div class="player-buttons">
         <button class="control-button" id="btnShuffle"><span class="material-icons">shuffle</span></button>
         <button class="control-button" id="btnPrev"><span class="material-icons">skip_previous</span></button>
-        <button class="control-button play-button" id="btnPlayPause"><span class="material-icons">play_arrow</span></button>
+        <button class="control-button play-button" id="btnPlayPause"><span
+            class="material-icons">play_arrow</span></button>
         <button class="control-button" id="btnNext"><span class="material-icons">skip_next</span></button>
         <button class="control-button" id="btnRepeat"><span class="material-icons">repeat</span></button>
       </div>
       <div class="progress-container">
         <span class="time current-time">0:00</span>
-        <div class="progress-bar" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
+        <div class="progress-bar" id="progressBar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
         <span class="time duration-time">0:00</span>
       </div>
     </div>
@@ -158,4 +156,5 @@
   <audio id="audioElement" preload="metadata"></audio>
   <script src="script.js"></script>
 </body>
+
 </html>

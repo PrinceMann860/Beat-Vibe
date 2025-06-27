@@ -319,8 +319,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const durationTimeElement = document.querySelector('.duration-time');
   const volumeButton = document.getElementById('volumeButton');
   const volumeSlider = document.getElementById('volumeSlider');
-  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-  const mobileMenu = document.querySelector('.mobile-menu');
   const likeButton = document.querySelector('.player-info .like-button');
   const searchInput = document.querySelector('.searchInput');
   const songListElement = document.getElementById('songList');
@@ -330,28 +328,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const playlistsGrid = document.getElementById('playlistsGrid');
   const playlistSongsContainer = document.getElementById('playlistSongsContainer');
 
-  // Mobile menu toggle
-  if (mobileMenuToggle && mobileMenu) {
-    mobileMenuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('show');
-      mobileMenuToggle.classList.toggle('active');
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!mobileMenu.contains(e.target) && e.target !== mobileMenuToggle) {
-        mobileMenu.classList.remove('show');
-        mobileMenuToggle.classList.remove('active');
-      }
-    });
-
-    document.querySelectorAll('.mobile-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('show');
-        mobileMenuToggle.classList.remove('active');
-      });
-    });
-  }
 
   // Helper functions
   function formatTime(seconds) {
